@@ -1,0 +1,36 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    display: -ms-inline-grid;
+    margin: 72px 144px
+
+
+  }
+ 
+.f1{
+    margin:(150px,150px,0px,150px);
+}
+  .input{
+    flex-direction: column;
+    display:flex;
+    background-color: rgb(21, 21, 25);
+    width: 332px;
+    justify-content: space-between;
+    border-radius: 15px;
+  
+  }
+  .button{
+    margin-left: 90px;
+    margin-top: 20px;
+    color: rgb(184, 184, 196);
+    background-color: rgb(17, 10, 216);
+    width: 150px;
+    height: 40px;
+    border-radius: 15px;
+  
+  }
+  .table{
+    background-color: rgb(10, 211, 218);
+    margin-left: 200px;  
+}

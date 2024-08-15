@@ -1,0 +1,48 @@
+<div class="f1">
+  <div class="input">
+    <mat-form-field class="formfield">
+      <mat-label>Username</mat-label>
+      <input matInput [(ngModel)]="selectedUsername" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Workout-Type</mat-label>
+      <mat-select [(ngModel)]="selectedWorkoutType">
+        <mat-option *ngFor="let workout of workoutTypes" [value]="workout">
+          {{ workout }}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Duration</mat-label>
+      <input matInput [(ngModel)]="selectedDuration"/>
+    </mat-form-field>
+  </div>
+  <button mat-flat-button class="button" (click)="addWorkout()">
+    Add Workout
+  </button>
+  <!-- >>{{ selectedWorkoutType }} -- to print value provide in selected workout type !--> 
+</div>
+
+<div class="tabledata">
+  <table class="table">
+    <thead>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <th>S.No.</th>
+        <th scope="col">Name</th>
+        <th scope="col">Workout</th>
+        <th scope="col">Duration</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of TableData; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ item.username }}</td>
+        <td>{{ item.type }}</td>
+        <td>{{ item.dur }}</td>
+        <td><button (click)="delete(i)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
