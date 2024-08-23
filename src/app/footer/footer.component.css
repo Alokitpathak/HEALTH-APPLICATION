@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    justify-content: space-between; /* Distributes space evenly between the divs */
+    align-items: flex-start;
+    padding: 50px; /* Space around the content */
+    background-color: antiquewhite; /* Light background */
+    gap: 20px; /* Space between cards */
+    flex-wrap: wrap; /* Allows cards to wrap on smaller screens */
+}
+
+.card {
+    flex: 1;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f1d5d5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    max-width: 300px; /* Limit card width */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.card-img-top {
+    height: 180px; /* Consistent image height */
+    width: 100%; /* Full width */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border-radius: 8px; /* Matches card radius */
+    margin-bottom: 15px;
+}
+
+.card-body h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-text p {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.card-text a p {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card-text a p:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .card {
+        margin: 20px 0;
+        max-width: 90%; /* Adjusts card width on smaller screens */
+    }
+}
